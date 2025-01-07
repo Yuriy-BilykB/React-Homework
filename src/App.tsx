@@ -1,14 +1,13 @@
 import './App.css'
-import {simpsons} from "./data/arraySimpsons.ts";
-import CharacterComponent from "./Components/CharacterComponent.tsx";
+import FamilyComponent from "./components/FamilyComponent/FamilyComponent.tsx";
 
 function App() {
-    const { name, surname, age, info, photo } = simpsons[0];
-  return (
-      <CharacterComponent member={{ name, surname, age, info, photo }}>
-          <p>{info}</p>
-        </CharacterComponent>
-  )
+    return (
+        <>
+                <FamilyComponent/>
+        </>
+    )
+
 }
 
 export default App
