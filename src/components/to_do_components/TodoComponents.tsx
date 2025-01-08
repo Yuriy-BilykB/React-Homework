@@ -8,11 +8,11 @@ const TodoComponents: FC = () => {
     useEffect(()=>{
         getUsers()
             .then(response =>{
-                setUsers(response);
+                setUsers(response.todos);
             })
     }, [])
     return (
-        users.map(user => <TodoComponent user={user}/>)
+        users.map(user => <TodoComponent key={user.id} user={user}/>)
     )
 }
 export default TodoComponents;

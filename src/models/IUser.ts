@@ -1,6 +1,9 @@
 export interface IUser {
-	userId: number;
 	id: number;
-	title: string;
+	todo: string;
 	completed: boolean;
+	userId: number;
+}
+export interface IArray {
+	todos: IUser[];
 }
