@@ -7,7 +7,8 @@ const SingleUserDetailsPage = () => {
     console.log(user.id)
     return (
         <div>
-            <CartsComponent userId={user.id} />
+            <h2>{user.firstName} {user.lastName}</h2>
+            <CartsComponent userId={user.id}/>
         </div>
     );
 };

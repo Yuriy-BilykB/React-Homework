@@ -1,7 +1,12 @@
 import UsersComponent from "../../components/users-component/UsersComponent.tsx";
+import {Outlet} from "react-router-dom";
 const UsersPage = () => {
     return (
-        <UsersComponent/>
+        <div>
+            <UsersComponent/>
+            <Outlet/>
+        </div>
+
     )
 }
 export default UsersPage;
