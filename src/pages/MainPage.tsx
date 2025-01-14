@@ -1,8 +1,12 @@
+import MenuComponent from "../components/MenuComponent.tsx";
+import {Outlet} from "react-router-dom";
 
 const MainPage = () => {
     return (
         <div>
-            <h1>Main Page</h1>
+            <MenuComponent/>
+            <hr/>
+            <Outlet/>
         </div>
     );
 };

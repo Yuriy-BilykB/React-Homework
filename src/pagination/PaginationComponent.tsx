@@ -1,25 +1,19 @@
 import {useSearchParams} from "react-router-dom";
 
 const PaginationComponent = () => {
-    const [query, setQuery] = useSearchParams({id: '1'})
+    const [searchParams, setSearchParams] = useSearchParams({page: '1'});
+    let currentPage =  Number(searchParams.get('page') || '1');
     return (
         <div>
             <button onClick={() => {
-                const id = query.get('id')
-                if (id) {
-                    let currentId = +id
-                    setQuery({id: (--currentId).toString()})
+                if (currentPage > 1) {
+                    setSearchParams({page: (--currentPage).toString()});
                 }
-                console.log(id)
+
             }}>Prev
             </button>
             <button onClick={() => {
-                const id = query.get('id')
-                if (id) {
-                    let currentId = +id
-                    setQuery({id: (++currentId).toString()})
-                }
-                console.log(id)
+                setSearchParams({page: (++currentPage).toString()});
             }}>Next
             </button>
         </div>

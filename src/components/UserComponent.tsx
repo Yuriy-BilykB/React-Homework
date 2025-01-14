@@ -7,8 +7,7 @@ type PropsType = {
 const UserComponent:FC<PropsType> = ({user}) => {
     return (
         <div>
-                {user.firstName}
-
+            {user.id}  {user.firstName}
         </div>
     )
 }
