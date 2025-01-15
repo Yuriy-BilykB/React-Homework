@@ -1,13 +1,10 @@
-import './App.css'
-import MainFormComponent from "./components/MainForm/MainFormComponent.tsx";
-
+import MainFormComponent from "./components/main-form/MainFormComponent.tsx";
 function App() {
-
-  return (
-    <>
-     <MainFormComponent/>
-    </>
-  )
+    return (
+        <>
+            <MainFormComponent />
+        </>
+    );
 }
 
-export default App
+export default App;
